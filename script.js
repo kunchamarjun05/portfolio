@@ -21,36 +21,28 @@ window.addEventListener('scroll', () => {
 let counted = false;
 function animateCounters(){
     if(counted) return;
-    const el = document.querySelector('.hero-metrics');
+    const el = document.querySelector('.stats-row');
     if(!el) return;
     if(el.getBoundingClientRect().top < innerHeight){
         counted = true;
-        document.querySelectorAll('.metric-num').forEach(n => {
+        document.querySelectorAll('.stat-num').forEach(n => {
             const end = +n.dataset.count; let cur = 0;
-            const timer = setInterval(() => { cur += Math.ceil(end/30); if(cur>=end){cur=end;clearInterval(timer)} n.textContent=cur; }, 40);
+            const timer = setInterval(() => { cur += Math.ceil(end/30); if(cur>=end){cur=end;clearInterval(timer)} n.textContent=cur; }, 50);
         });
     }
 }
 window.addEventListener('scroll', animateCounters);
-animateCounters();
 
 // Scroll reveal
 const obs = new IntersectionObserver(entries => {
     entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); }});
-}, { threshold:0.1, rootMargin:'0px 0px -40px 0px' });
-document.querySelectorAll('.proj-card,.proj-hero,.sk,.cl,.about-grid,.contact-box').forEach(el => { el.classList.add('reveal'); obs.observe(el); });
+}, { threshold:0.1 });
+document.querySelectorAll('.proj-card,.proj-featured,.stat-box,.skill-item,.about-grid,.contact-wrapper').forEach(el => { el.classList.add('reveal'); obs.observe(el); });
 
 // Form
-document.getElementById('cForm')?.addEventListener('submit', e => {
+document.getElementById('contactForm')?.addEventListener('submit', e => {
     e.preventDefault();
     const btn = e.target.querySelector('button');
-    btn.innerHTML = '<span>✓ Sent!</span>'; btn.style.background = '#22c55e';
-    setTimeout(() => { btn.innerHTML = '<span>Send Message</span>'; btn.style.background = ''; e.target.reset(); }, 2500);
-});
-
-// Mobile menu
-document.getElementById('menuBtn')?.addEventListener('click', () => {
-    const l = document.getElementById('navLinks');
-    const open = l.style.display === 'flex';
-    Object.assign(l.style, open ? {display:'none'} : {display:'flex',flexDirection:'column',position:'absolute',top:'56px',right:'24px',background:'rgba(5,5,8,.95)',padding:'16px 24px',borderRadius:'12px',border:'1px solid rgba(255,255,255,.06)',backdropFilter:'blur(20px)'});
+    btn.textContent = '✓ Message Sent!'; btn.style.background = '#0d7377'; btn.style.color = '#fff';
+    setTimeout(() => { btn.textContent = 'Send Message →'; btn.style.background = ''; btn.style.color = ''; e.target.reset(); }, 2500);
 });

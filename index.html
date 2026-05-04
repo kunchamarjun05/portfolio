@@ -3,128 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arjun Kuncham — Developer Portfolio</title>
-    <meta name="description" content="Portfolio of Arjun Kuncham — Full-Stack Developer, ML Engineer & Data Analyst.">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Arjun Kuncham — Full Stack Developer</title>
+    <meta name="description" content="Arjun Kuncham — Full-Stack Developer & ML Engineer. Building quality digital experiences.">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Noise overlay -->
-    <div class="noise"></div>
-    <!-- Grid lines bg -->
-    <div class="grid-bg"></div>
+    <!-- Decorative Lines -->
+    <svg class="deco-lines" viewBox="0 0 1440 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="200" y1="700" x2="750" y2="200" stroke="#ddd" stroke-width="1"/>
+        <line x1="250" y1="750" x2="900" y2="100" stroke="#ddd" stroke-width="1"/>
+        <circle cx="200" cy="700" r="18" fill="#0d7377"/>
+        <circle cx="900" cy="100" r="12" fill="#0d7377"/>
+    </svg>
 
     <!-- Nav -->
     <nav class="nav" id="nav">
         <div class="nav-inner">
-            <a href="#" class="logo">arjun<span>.dev</span></a>
-            <div class="nav-links" id="navLinks">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#work">Work</a>
-                <a href="#skills">Skills</a>
-                <a href="#contact">Contact</a>
+            <button class="nav-menu" id="menuBtn" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <a href="#" class="nav-logo">ARJUN <span>KUNCHAM</span></a>
+            <div class="nav-right">
+                <div class="nav-links" id="navLinks">
+                    <a href="#home" class="active">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#contact">Contact</a>
+                </div>
             </div>
-            <a href="#contact" class="nav-btn">Let's Talk →</a>
-            <button class="menu-btn" id="menuBtn" aria-label="Menu"><span></span><span></span></button>
         </div>
     </nav>
 
     <!-- Hero -->
     <section class="hero" id="home">
-        <div class="hero-left">
-            <div class="hero-tag"><span class="tag-dot"></span> Open to Work</div>
-            <h1 class="hero-h1">I craft <span class="hero-em">digital</span><br>experiences that<br><span class="hero-em">matter</span>.</h1>
-            <p class="hero-p">Full-Stack Developer & ML Engineer from Hyderabad, India. I transform ideas into production-ready applications with clean code and stunning design.</p>
-            <div class="hero-btns">
-                <a href="#work" class="btn-main">See My Work <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
-                <a href="https://github.com/kunchamarjun05" target="_blank" class="btn-sec">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                    GitHub
-                </a>
+        <div class="hero-inner">
+            <div class="hero-text">
+                <h1>Full Stack <span class="highlight">Developer</span><br><span class="sub-line">& ML Engineer</span></h1>
+                <p class="hero-tagline">for your <em class="italic-accent">next big idea</em></p>
+                <p class="hero-desc">I craft beautiful, functional web applications and intelligent AI solutions that deliver real-world impact.</p>
+                <div class="hero-btns">
+                    <a href="#projects" class="btn-yellow">View Projects</a>
+                    <a href="#contact" class="btn-outline">Get in Touch</a>
+                </div>
+                <div class="hero-socials">
+                    <a href="https://github.com/kunchamarjun05" target="_blank" class="social-link" aria-label="GitHub">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    </a>
+                    <a href="mailto:arjunkuncham05@gmail.com" class="social-link" aria-label="Email">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4L12 13 2 4"/></svg>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" class="social-link" aria-label="LinkedIn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    </a>
+                </div>
             </div>
-            <div class="hero-metrics">
-                <div class="metric"><span class="metric-num" data-count="5">0</span><span class="metric-label">Projects</span></div>
-                <div class="metric"><span class="metric-num" data-count="8">0</span><span class="metric-label">Tech Stack</span></div>
-                <div class="metric"><span class="metric-num" data-count="4">0</span><span class="metric-label">Deployments</span></div>
+            <div class="hero-photo">
+                <div class="photo-circle-bg"></div>
+                <img src="profile.jpg" alt="Arjun Kuncham" class="photo-img" onerror="this.style.display='none';document.querySelector('.photo-fallback').style.display='flex'">
+                <div class="photo-fallback">AK</div>
+                <!-- Decorative dots -->
+                <div class="deco-dot dot-1"></div>
+                <div class="deco-dot dot-2"></div>
+                <div class="deco-dot dot-3"></div>
             </div>
         </div>
-        <div class="hero-right">
-            <div class="photo-wrapper">
-                <div class="photo-ring"></div>
-                <div class="photo-glow"></div>
-                <!-- Replace 'profile.jpg' with your actual photo file -->
-                <img src="profile.jpg" alt="Arjun Kuncham" class="photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-                <div class="photo-fallback" style="display:none">AK</div>
-                <div class="float-card float-1"><span>🐍</span> Python</div>
-                <div class="float-card float-2"><span>⚡</span> JavaScript</div>
-                <div class="float-card float-3"><span>🤖</span> ML / AI</div>
-            </div>
-        </div>
+        <div class="scroll-indicator"><span>Scroll Down</span><div class="scroll-line"></div></div>
     </section>
-
-    <!-- Marquee -->
-    <div class="marquee"><div class="marquee-track"><span>PYTHON</span><span>•</span><span>JAVASCRIPT</span><span>•</span><span>MACHINE LEARNING</span><span>•</span><span>STREAMLIT</span><span>•</span><span>SQL</span><span>•</span><span>HTML/CSS</span><span>•</span><span>DATA ANALYTICS</span><span>•</span><span>PYTHON</span><span>•</span><span>JAVASCRIPT</span><span>•</span><span>MACHINE LEARNING</span><span>•</span><span>STREAMLIT</span><span>•</span><span>SQL</span><span>•</span><span>HTML/CSS</span><span>•</span><span>DATA ANALYTICS</span><span>•</span></div></div>
 
     <!-- About -->
     <section class="about" id="about">
         <div class="container">
             <div class="about-grid">
                 <div class="about-left">
-                    <p class="label">— About Me</p>
-                    <h2 class="heading">Building the future,<br>one <span class="em">line of code</span><br>at a time.</h2>
+                    <p class="section-label">About Me</p>
+                    <h2 class="section-heading">I build digital products that <span class="highlight">people love</span>.</h2>
                 </div>
                 <div class="about-right">
-                    <p>I'm a passionate developer with expertise in <strong>Full-Stack Development</strong>, <strong>Machine Learning</strong>, and <strong>Data Analytics</strong>. I believe great software is a blend of solid engineering and beautiful design.</p>
-                    <p>From AI-powered healthcare predictors to real-time dashboards, I build solutions that make a real impact. Currently pursuing B.Tech in Computer Science from Hyderabad.</p>
-                    <div class="about-tags">
-                        <span>🎓 B.Tech CSE</span>
-                        <span>📍 Hyderabad</span>
-                        <span>💼 Full-Stack + AI/ML</span>
-                        <span>🚀 Open to Work</span>
+                    <p>I'm a passionate developer from <strong>Hyderabad, India</strong> with hands-on experience in Full-Stack Development, Machine Learning, and Data Analytics.</p>
+                    <p>From AI-powered healthcare systems to interactive dashboards — I believe great software is where solid engineering meets beautiful design.</p>
+                    <div class="about-info">
+                        <div class="info-item"><span class="info-icon">🎓</span><div><strong>B.Tech CSE</strong><p>Computer Science</p></div></div>
+                        <div class="info-item"><span class="info-icon">📍</span><div><strong>Hyderabad</strong><p>India</p></div></div>
+                        <div class="info-item"><span class="info-icon">💼</span><div><strong>Full-Stack</strong><p>& ML Engineer</p></div></div>
                     </div>
                 </div>
+            </div>
+            <!-- Stats -->
+            <div class="stats-row">
+                <div class="stat-box"><span class="stat-num" data-count="5">0</span><span class="stat-plus">+</span><p>Projects</p></div>
+                <div class="stat-box"><span class="stat-num" data-count="8">0</span><span class="stat-plus">+</span><p>Technologies</p></div>
+                <div class="stat-box"><span class="stat-num" data-count="4">0</span><span class="stat-plus"></span><p>Deployments</p></div>
+                <div class="stat-box"><span class="stat-num" data-count="3">0</span><span class="stat-plus">+</span><p>AI Models</p></div>
             </div>
         </div>
     </section>
 
-    <!-- Work / Projects -->
-    <section class="work" id="work">
+    <!-- Projects -->
+    <section class="projects" id="projects">
         <div class="container">
-            <p class="label">— Featured Work</p>
-            <h2 class="heading">Selected <span class="em">Projects</span></h2>
-            <p class="sub">Things I've built that I'm proud of.</p>
+            <p class="section-label center">My Work</p>
+            <h2 class="section-heading center">Featured <span class="highlight">Projects</span></h2>
 
-            <!-- Featured project -->
-            <div class="proj-hero">
-                <div class="proj-hero-img"><img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80" alt="Healthcare AI"></div>
-                <div class="proj-hero-info">
-                    <div class="proj-tags"><span class="t t-py">Python</span><span class="t t-ml">ML</span><span class="t t-st">Streamlit</span></div>
+            <!-- Featured -->
+            <div class="proj-featured">
+                <div class="pf-img"><img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80" alt="Healthcare AI"></div>
+                <div class="pf-info">
+                    <span class="pf-label">Featured Project</span>
                     <h3>🏥 Healthcare AI Predictor</h3>
-                    <p>AI-powered system predicting Diabetes, Heart Disease & Parkinson's using SVM, XGBoost & Random Forest with interactive Streamlit dashboard.</p>
-                    <div class="proj-btns">
-                        <a href="https://github.com/kunchamarjun05/healthcare-ai" target="_blank" class="btn-main btn-sm">View Code ↗</a>
-                    </div>
+                    <p>AI-powered multi-disease prediction system for Diabetes, Heart Disease & Parkinson's using Machine Learning models — SVM, XGBoost & Random Forest.</p>
+                    <div class="pf-tags"><span>Python</span><span>ML</span><span>Streamlit</span><span>XGBoost</span></div>
+                    <a href="https://github.com/kunchamarjun05/healthcare-ai" target="_blank" class="btn-yellow btn-sm">View Project →</a>
                 </div>
             </div>
 
-            <!-- Project Grid -->
+            <!-- Grid -->
             <div class="proj-grid">
                 <div class="proj-card">
-                    <div class="pc-img"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80" alt="Dashboard"><div class="pc-overlay"><a href="https://kunchamarjun05.github.io/ecommerce-dashboard/" target="_blank">Live ↗</a><a href="https://github.com/kunchamarjun05/ecommerce-dashboard" target="_blank">Code ↗</a></div></div>
-                    <div class="pc-info"><div class="proj-tags"><span class="t t-js">JS</span><span class="t t-py">Python</span><span class="t t-sql">SQL</span></div><h4>📊 E-Commerce Dashboard</h4><p>Interactive analytics with KPI cards, charts & SQL queries.</p></div>
+                    <div class="pc-img"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80" alt="Dashboard"><div class="pc-hover"><a href="https://kunchamarjun05.github.io/ecommerce-dashboard/" target="_blank">Live Demo</a><a href="https://github.com/kunchamarjun05/ecommerce-dashboard" target="_blank">Source Code</a></div></div>
+                    <div class="pc-body"><h4>📊 E-Commerce Dashboard</h4><p>Interactive analytics dashboard with KPI metrics, charts, and SQL queries.</p><div class="pc-tags"><span>JavaScript</span><span>Python</span><span>SQL</span></div></div>
                 </div>
                 <div class="proj-card">
-                    <div class="pc-img"><img src="https://images.unsplash.com/photo-1592210454359-9043f067919b?w=600&q=80" alt="Weather"><div class="pc-overlay"><a href="https://kunchamarjun05.github.io/weather-app/" target="_blank">Live ↗</a><a href="https://github.com/kunchamarjun05/weather-app" target="_blank">Code ↗</a></div></div>
-                    <div class="pc-info"><div class="proj-tags"><span class="t t-js">JS</span><span class="t t-css">CSS</span><span class="t t-api">API</span></div><h4>🌤️ SkyPulse Weather</h4><p>Real-time weather with dynamic backgrounds & geolocation.</p></div>
+                    <div class="pc-img"><img src="https://images.unsplash.com/photo-1592210454359-9043f067919b?w=600&q=80" alt="Weather"><div class="pc-hover"><a href="https://kunchamarjun05.github.io/weather-app/" target="_blank">Live Demo</a><a href="https://github.com/kunchamarjun05/weather-app" target="_blank">Source Code</a></div></div>
+                    <div class="pc-body"><h4>🌤️ SkyPulse Weather</h4><p>Real-time weather with dynamic sky backgrounds and geolocation.</p><div class="pc-tags"><span>JavaScript</span><span>CSS</span><span>API</span></div></div>
                 </div>
                 <div class="proj-card">
-                    <div class="pc-img"><img src="https://images.unsplash.com/photo-1617531653332-bd46c24f2068?w=600&q=80" alt="BMW"><div class="pc-overlay"><a href="https://kunchamarjun05.github.io/bmw-dashboard/" target="_blank">Live ↗</a><a href="https://github.com/kunchamarjun05/bmw-dashboard" target="_blank">Code ↗</a></div></div>
-                    <div class="pc-info"><div class="proj-tags"><span class="t t-js">JS</span><span class="t t-css">CSS</span></div><h4>🚗 LuxeAuto Showroom</h4><p>Premium car showroom with glassmorphism & modals.</p></div>
+                    <div class="pc-img"><img src="https://images.unsplash.com/photo-1617531653332-bd46c24f2068?w=600&q=80" alt="BMW"><div class="pc-hover"><a href="https://kunchamarjun05.github.io/bmw-dashboard/" target="_blank">Live Demo</a><a href="https://github.com/kunchamarjun05/bmw-dashboard" target="_blank">Source Code</a></div></div>
+                    <div class="pc-body"><h4>🚗 LuxeAuto Showroom</h4><p>Premium car showroom with glassmorphism and interactive modals.</p><div class="pc-tags"><span>JavaScript</span><span>CSS</span></div></div>
                 </div>
                 <div class="proj-card">
-                    <div class="pc-img"><img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=80" alt="EMS"><div class="pc-overlay"><a href="https://kunchamarjun05.github.io/employee-management-system/" target="_blank">Live ↗</a><a href="https://github.com/kunchamarjun05/employee-management-system" target="_blank">Code ↗</a></div></div>
-                    <div class="pc-info"><div class="proj-tags"><span class="t t-js">JS</span><span class="t t-css">CSS</span></div><h4>👥 Employee Management</h4><p>Full CRUD system with secure login & modern dashboard.</p></div>
+                    <div class="pc-img"><img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=80" alt="EMS"><div class="pc-hover"><a href="https://kunchamarjun05.github.io/employee-management-system/" target="_blank">Live Demo</a><a href="https://github.com/kunchamarjun05/employee-management-system" target="_blank">Source Code</a></div></div>
+                    <div class="pc-body"><h4>👥 Employee Management</h4><p>Full CRUD system with secure login and modern dashboard.</p><div class="pc-tags"><span>JavaScript</span><span>CSS</span></div></div>
                 </div>
             </div>
         </div>
@@ -133,17 +143,17 @@
     <!-- Skills -->
     <section class="skills" id="skills">
         <div class="container">
-            <p class="label">— Tech Stack</p>
-            <h2 class="heading">Tools & <span class="em">Technologies</span></h2>
-            <div class="skill-grid">
-                <div class="sk"><div class="sk-icon">🐍</div><span>Python</span></div>
-                <div class="sk"><div class="sk-icon">⚡</div><span>JavaScript</span></div>
-                <div class="sk"><div class="sk-icon">🌐</div><span>HTML/CSS</span></div>
-                <div class="sk"><div class="sk-icon">🤖</div><span>Machine Learning</span></div>
-                <div class="sk"><div class="sk-icon">📊</div><span>Data Analytics</span></div>
-                <div class="sk"><div class="sk-icon">🗄️</div><span>SQL</span></div>
-                <div class="sk"><div class="sk-icon">🚀</div><span>Streamlit</span></div>
-                <div class="sk"><div class="sk-icon">🔧</div><span>Git & GitHub</span></div>
+            <p class="section-label center">What I Use</p>
+            <h2 class="section-heading center">Skills & <span class="highlight">Technologies</span></h2>
+            <div class="skills-grid">
+                <div class="skill-item"><div class="si-icon">🐍</div><span>Python</span></div>
+                <div class="skill-item"><div class="si-icon">⚡</div><span>JavaScript</span></div>
+                <div class="skill-item"><div class="si-icon">🌐</div><span>HTML/CSS</span></div>
+                <div class="skill-item"><div class="si-icon">🤖</div><span>Machine Learning</span></div>
+                <div class="skill-item"><div class="si-icon">📊</div><span>Data Analytics</span></div>
+                <div class="skill-item"><div class="si-icon">🗄️</div><span>SQL</span></div>
+                <div class="skill-item"><div class="si-icon">🚀</div><span>Streamlit</span></div>
+                <div class="skill-item"><div class="si-icon">🔧</div><span>Git & GitHub</span></div>
             </div>
         </div>
     </section>
@@ -151,26 +161,39 @@
     <!-- Contact -->
     <section class="contact" id="contact">
         <div class="container">
-            <div class="contact-box">
-                <p class="label">— Get In Touch</p>
-                <h2 class="heading">Let's build something<br><span class="em">amazing</span> together.</h2>
-                <p class="sub">Have a project in mind or an opportunity? Drop me a message.</p>
-                <div class="contact-links">
-                    <a href="mailto:arjunkuncham05@gmail.com" class="cl"><span class="cl-icon">✉️</span><div><strong>Email</strong><p>arjunkuncham05@gmail.com</p></div></a>
-                    <a href="https://github.com/kunchamarjun05" target="_blank" class="cl"><span class="cl-icon">🐙</span><div><strong>GitHub</strong><p>kunchamarjun05</p></div></a>
-                    <a href="https://linkedin.com/in/" target="_blank" class="cl"><span class="cl-icon">💼</span><div><strong>LinkedIn</strong><p>Connect with me</p></div></a>
+            <div class="contact-wrapper">
+                <div class="contact-left">
+                    <p class="section-label">Contact</p>
+                    <h2 class="section-heading">Let's work<br><span class="highlight">together.</span></h2>
+                    <p class="contact-desc">Got a project or opportunity? Let's make something great.</p>
+                    <div class="contact-info">
+                        <a href="mailto:arjunkuncham05@gmail.com" class="ci"><span>✉️</span>arjunkuncham05@gmail.com</a>
+                        <a href="https://github.com/kunchamarjun05" target="_blank" class="ci"><span>🐙</span>github.com/kunchamarjun05</a>
+                        <a href="tel:+91" class="ci"><span>📍</span>Hyderabad, India</a>
+                    </div>
                 </div>
-                <form class="cform" id="cForm">
-                    <div class="cform-row"><input type="text" placeholder="Name" required><input type="email" placeholder="Email" required></div>
-                    <textarea placeholder="Your message..." rows="4" required></textarea>
-                    <button type="submit" class="btn-main btn-full">Send Message <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg></button>
+                <form class="contact-form" id="contactForm">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <input type="text" placeholder="Subject">
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit" class="btn-yellow btn-full">Send Message →</button>
                 </form>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer"><div class="container footer-flex"><p>© 2026 Arjun Kuncham</p><div class="footer-links"><a href="https://github.com/kunchamarjun05" target="_blank">GitHub</a><a href="mailto:arjunkuncham05@gmail.com">Email</a></div></div></footer>
+    <footer class="footer">
+        <div class="container footer-flex">
+            <p>© 2026 <strong>Arjun Kuncham</strong>. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="https://github.com/kunchamarjun05" target="_blank">GitHub</a>
+                <a href="mailto:arjunkuncham05@gmail.com">Email</a>
+                <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>

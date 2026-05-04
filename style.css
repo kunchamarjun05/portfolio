@@ -68,9 +68,9 @@ img{max-width:100%;display:block}
 
 /* Hero Photo - ROUND */
 .hero-visual{flex:0 0 auto;position:relative;width:320px;height:320px;display:flex;align-items:center;justify-content:center;animation:fadeIn 1s .3s ease backwards}
-.avatar-ring{width:220px;height:220px;border-radius:50%;position:relative;display:flex;align-items:center;justify-content:center}
+.avatar-ring{width:260px;height:260px;border-radius:50%;position:relative;display:flex;align-items:center;justify-content:center}
 .avatar-glow{position:absolute;inset:-20px;border-radius:50%;background:radial-gradient(circle,rgba(245,197,24,.25),transparent 70%);animation:pulse 4s ease-in-out infinite}
-.avatar-img{width:150px;height:150px;border-radius:50%;object-fit:cover;object-position:center;z-index:2;border:4px solid rgba(245,197,24,.5);position:relative;box-shadow:0 0 40px rgba(245,197,24,.15)}
+.avatar-img{width:250px;height:250px;border-radius:50%;object-fit:cover;object-position:center;z-index:2;border:none;position:relative;filter:drop-shadow(0 0 30px rgba(245,197,24,.2))}
 .avatar-fallback{display:none;width:220px;height:220px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent2));align-items:center;justify-content:center;font-size:56px;font-weight:900;color:#111;z-index:2;border:4px solid rgba(255,255,255,.15)}
 .orbit-ring{position:absolute;inset:-20px;animation:spin 20s linear infinite}
 .orbit-dot{position:absolute;font-size:24px;top:50%;left:50%;transform:rotate(calc(var(--i)*90deg)) translateX(150px) rotate(calc(var(--i)*-90deg))}

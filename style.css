@@ -58,6 +58,8 @@ img{max-width:100%;display:block}
 .btn-primary:hover{background:var(--accent2);transform:translateY(-2px);box-shadow:0 10px 30px rgba(245,197,24,.35)}
 .btn-outline{background:rgba(255,255,255,.05);color:var(--text);border:1px solid var(--border)}
 .btn-outline:hover{background:rgba(255,255,255,.1);transform:translateY(-2px)}
+.btn-resume{background:linear-gradient(135deg,#10b981,#059669);color:#fff;border:none;box-shadow:0 4px 20px rgba(16,185,129,.25)}
+.btn-resume:hover{background:linear-gradient(135deg,#059669,#047857);transform:translateY(-2px);box-shadow:0 10px 30px rgba(16,185,129,.4)}
 .btn-full{width:100%;justify-content:center}
 
 .hero-stats{display:flex;align-items:center;gap:28px;animation:fadeUp .6s .5s ease backwards}
